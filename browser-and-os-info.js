@@ -45,6 +45,12 @@
               blockType: Scratch.BlockType.REPORTER,
               text: 'get platform',
               disableMonitor: true,
+            },
+            {
+              opcode: 'getRenderingEngine',
+              blockType: Scratch.BlockType.REPORTER,
+              text: 'get rendering engine',
+              disableMonitor: true,
             }
           ]
         };
@@ -83,6 +89,11 @@
       getPlatform() {
         const browser = this.getBowser()
         return browser.getPlatformType()
+      }
+
+      getRenderingEngine() {
+        const browser = this.getBowser()
+        return browser.getEngineName()
       }
     }
 
